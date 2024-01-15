@@ -11,7 +11,7 @@ const nextConfig = {
 		MONGO_URL: "mongodb+srv://listo:avibarigal@cluster0.b0kwwtf.mongodb.net/?retryWrites=true&w=majority",
 		AUTH_SECRET: "1b3120d056c57bc5e2a22f2369bedb01"
 	},
-	reactStrictMode: true,
+	reactStrictMode: false,
 }
 
 module.exports = withPWA(nextConfig);

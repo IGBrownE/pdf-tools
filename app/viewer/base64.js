@@ -1,3 +1,3 @@
-export const base64 =()=>{ 
- return ''
+export const base64 = () => {
+	return ''
 }
