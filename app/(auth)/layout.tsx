@@ -1,4 +1,3 @@
-import '@/app/styles/Auth.css'
 const AuthLayout = ({
 	children
 }: {
