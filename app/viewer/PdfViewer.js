@@ -19,13 +19,7 @@ export default function App() {
             console.log(1)
             const pdfJS = await import('pdfjs-dist/build/pdf');
             pdfJS.GlobalWorkerOptions.workerSrc = window.location.origin  + '/pdf.worker.min.mjs'
-            // + new URL(
-            //     'pdfjs-dist/build/pdf.worker.min.mjs',
-            //     import.meta.url,
-            // ).toString();
-
-       debugger
-            const unitArray = await base64ToArrayBuffer(base64)
+            const unitArray = await base64ToArrayBuffer(base64())
             const pdf = await pdfJS.getDocument({ data: unitArray }).promise;
             const page = await pdf.getPage(1);
             const viewport = page.getViewport({ scale: 1.5 });
@@ -38,7 +32,6 @@ export default function App() {
 
             // Render PDF page into canvas context.
             const renderContext = { canvasContext, viewport };
-        console.log(1)
             page.render(renderContext);
         }
 
